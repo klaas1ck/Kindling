@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to Kindling</title>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="form-box signin-box">
+        <form action="/login" method="POST" enctype="application/x-www-form-urlencoded">
+            <h2 id="wel">Welcome to Kindling</h2>
+            <h4>Kindling Login</h4>
+            <input id="userName" type="text" placeholder="Enter Username" value="" name ="username"/>
+            <input id="emaillogin" type="email" value="" Placeholder="Email" name="email"/>
+            <input id="userPw" type="password" placeholder="Enter Password" value="" name="password"/>
+            <button id="login_btn" type="submit" value="Login">Login</button>
+        </form>
+        <br>
+
+    <div class="form-box signup-box">
+            <form action="/register" method="POST" enctype="application/x-www-form-urlencoded">
+            <h4 id="cA">User Registration</h4>
+            <p>Please provide your details to sign up for Kindling</p>
+            <input id="un" type="text" placeholder="Username" value="" style="margin-top: 2px" name="username"/>
+            <input id="firstName" type="text" placeholder="firstName" value=""  name= "firstName" required/>
+            <input id="lastName" type="text" placeholder="lastName" value=""  name= "lastName" required/>
+            <input id="hobbies" type="text" placeholder="hobbies" value=""  name= "hobbies" required/>
+            <input id="emailstore" type="email" placeholder="email" value=""  name= "email" required/>
+            <input id="pw" type="date" placeholder="birthday" value=""  name= "birthday"/>
+            <input id="pw" type="password" placeholder="Password" value=""  name= "password"/>
+            <button type="submit" id="rgstr_btn">Sign up</button>
+        </form>
+    </div>
+
+    <script>
+    
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const box = document.getElementById('box');
+
+signUpButton.addEventListener('click', () => {
+    box.classList.add("r-cover");
+});
+
+/* Moves the sign in form to the right, makes it visible again, by removing the other css class "r-cover" when the signIn-button is clicked on */
+signInButton.addEventListener('click', () => {
+    box.classList.remove("r-cover");
+});
+var something = (function() {
+    var executed = false;
+    return function() {
+        if (!executed) {
+            executed = true;
+                        document.getElementById("text-area").style.display = "none"; 
+
+        }
+    };
+})();
+
+    
+    </script>
+</body>
+</html>

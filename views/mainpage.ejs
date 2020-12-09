@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head> 
+<title>Kindling | Dating Web App</title>
+
+<h1 style="text-align: center;"> Kindling | Profile Frontpage</h1>
+<br>
+
+
+<h3>Possible Match:</h3>
+<p>Name: Linda Nielsen</p>
+<p>Age: 28<p>
+<p>Work: Intern at Kindling<p>
+<p>School: Copenhagen Business School<p>
+
+    <div>
+        <table>
+            <% for (let i = 0; i < user.length;i++) { %>
+            <tr>
+                <th>Username:</th>
+                <th>Firstname:</th>
+                <th>Lastname:</th>
+                <th>Hobbies:</th>
+                <th>Age:</th>
+            </tr>
+            <tr>
+                <td><%=user[i].username%> </td>
+                <td><%=user[i].firstName%> </td>
+                <td><%=user[i].lastName%> </td>
+                <td><%=user[i].hobbies%> </td>
+                <td><%=user[i].birthday%> </td>
+                     <input display="none" readonly/>
+                </form>
+            </tr>
+        <%  } %>
+        </table>
+    
+    </div>
+    
+
+</head>
+<div>
+    <form>
+    <button onclick="likeFunction()">Like</button>
+    <script>
+    function likeFunction() {
+        window.alert("You have liked this user")
+    }
+   </script>
+</form>
+<form>
+    <button onclick="dislikeFunction()">Dislike</button>
+    <script>
+        function dislikeFunction() {
+            window.alert("You have disliked this user")
+        }
+       </script>
+</form>
+<br>
+</div>
+<form action="/mainpage/logout" method="post"> 
+<button>Log Out</button>
+</form>
+<div> 
+<form action="/mainpage/delete" method=""
+</div>
